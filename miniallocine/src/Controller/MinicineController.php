@@ -59,10 +59,10 @@ class MinicineController extends AbstractController
      * @param Integer $year
      */
     public function show($title, $year)
-    {
+    {  
         $filmRepo = $this->getDoctrine()->getRepository('App:Film');
         $film = $filmRepo->findOneBy(['title' => $title, 'year' => $year]);
-        
+        $jana= 5;
         if (!$film) {
             throw $this->createNotFoundException('The film does not exist');
         }
