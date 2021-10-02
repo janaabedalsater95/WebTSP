@@ -64,6 +64,7 @@ class MinicineController extends AbstractController
         $film = $filmRepo->findOneBy(['title' => $title, 'year' => $year]);
         $jana= 10000;
         $mhmd= 12;
+        $ramy=10;
         if (!$film) {
             throw $this->createNotFoundException('The film does not exist');
         }
